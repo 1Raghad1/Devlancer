@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+.view {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+
+}
+.btnhome{
+    position: sticky;
+  z-index: 3; /* put .gold-box above .green-box and .dashed-box */
+  width: 80%;
+  margin-top: -380px;
+  margin-left: 9%;
+  font-weight: bold;
+}
+.down{
+  margin-top:250px;
+  margin-left: 5%;
+  text-align: center;
+}
+.down2{
+background-color: #e8e8e8;
+text-align: center;
+}
+.box-wrap{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+  }
+  .box{
+    margin:2%;
+    box-shadow:0 2px 3px 0px rgba(0,0,0,0.25);
+    border-radius:3px;
+    transition:.2s all; 
+  }
+  .box-wrap:hover .box{
+    filter:blur(3px);
+    opacity:.5;
+    transform: scale(.98);
+    box-shadow:none;
+  }
+  .box-wrap:hover .box:hover{
+    transform:scale(1);
+    filter:blur(0px);
+    opacity:1;
+    box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);
+  }
+  .footer{
+    background-color: #e8e8e8;
+    /* border-top: 1px solid black; */
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ 
+  }
+
+  .navhref {
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    height: 34px;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: green;
+    letter-spacing: 0.1em;
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 10px;
+    position: relative;
+    -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+    transition: background-color 0.3s linear, color 0.3s linear;
+    background: rgba(255, 255, 255, 1);
+  }
+  .navhref:hover {
+    color: #0deca9;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .nav{
+    position: sticky;
+    margin-top: -12px;
+  }

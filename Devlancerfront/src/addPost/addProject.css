@@ -1,0 +1,79 @@
+.file-field.big .file-path-wrapper {
+    height: 3.2rem; }
+    .file-field.big .file-path-wrapper .file-path {
+    height: 3rem; }
+    
+    .classh1{
+    
+        padding-bottom: 10px;
+        border-bottom: 2px solid #92cd80;
+        max-width: 90%;
+        font-weight: 200;
+    }
+    .container1 {max-width: 850px; width: 100%; }
+    .four { width: 40%; max-width: 40%;}
+    .col {
+        display: block;
+        float:left;
+        margin: 1% 0 1% 1.6%;
+      }
+      
+      .col:first-of-type { margin-left: 0; }
+      .cf:before,
+      .cf:after {
+          content: " ";
+          display: table;
+      }
+      
+      .cf:after {
+          clear: both;
+      }
+      
+      .cf {
+          *zoom: 1;
+      }
+
+      .form .plan input, .form .payment-plan input, .form .payment-type input{
+        display: none;
+    } 
+    
+.form label{
+        position: relative;
+        color: rgb(0, 0, 0); 
+        background-color: rgba(192, 192, 192, 0.835);
+        /* text-align: center; */
+        height: 200px;
+        line-height: 150px;
+        width: 100%;
+        display: block;
+        cursor: pointer;
+        border: 3px solid transparent;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 3px solid #333;
+        margin-left: 40px;
+    } 
+    
+    .form .plan input:checked + label, .form .payment-plan input:checked + label, .form .payment-type input:checked + label{
+        border: 3px solid #333;
+        background-color: #ffffffb7;
+color: black;
+    }
+    
+     .form .plan input:checked + label:after, form .payment-plan input:checked + label:after, .form .payment-type input:checked + label:after{
+        content: "\2713";
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 100%;
+        border: 2px solid #333;
+        background-color: #92cd80;
+        z-index: 999;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+    }
+ .addP{
+text-align: center;
+      }
