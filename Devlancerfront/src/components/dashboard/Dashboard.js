@@ -13,7 +13,7 @@ render() {
     const { user } = this.props.auth;
 return (
       <div style={{ height: "75vh" }} className="container valign-wrapper">
-        <div className="row">
+        {/* <div className="row">
           <div className="col s12 center-align">
             <h4>
               <b>Hey there,</b> {user.name.split(" ")[0]}
@@ -35,7 +35,7 @@ return (
               Logout
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }

@@ -13,12 +13,11 @@ app.use(
   })
 );
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'Devlancerfront/build')));
+app.use(express.static(path.join(__dirname, '/Devlancerfront/build')));
 
 
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'Devlancerfront/build', 'index.html'));
-});
+
+
 
 const db = require("./config/keys").mongoURI;
 
@@ -53,14 +52,17 @@ mongoose.connect(
   const usersRouter = require('./routes/users')
   const PostRouter = require('./routes/posts')
 
-app.use('/')
+// app.use('/')
   app.use('/projects', projectsRouter)
   //app.use('/posts', postsRouter)
-  app.use('/', usersRouter)
+  app.use('/users', usersRouter)
   app.use('/posts', PostRouter)
 
 
-
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname+'/Devlancerfront/build/index.html'));
+  });
+  
 const port = process.env.PORT || 5000;
 
 //start server .. listen to port

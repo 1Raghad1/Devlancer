@@ -9,21 +9,23 @@ export default class RightSide extends Component {
  state = {
   data: [],
   passobj: [],
-  flag: "false"
+  flag: "false",
+  loading :false
  };
  componentDidMount = () => {
   axios.get("/projects/all")
    .then(response => {
-    console.log("here sta");
-    console.log(response.data);
-    this.setState({ data: response.data });
-    console.log("here end");
+
+    console.log(response);
+    this.setState({ data: response.data ,loading:true});
+  
     console.log(this.state.data);
    })
    .catch(err => {
     console.log(err);
    });
  };
+
  exerciseList() {
 
   const st = store.getState();
@@ -178,7 +180,7 @@ export default class RightSide extends Component {
          margin: "auto"
         }}
        >
-        {this.exerciseList()}
+        { this.state.loading?this.exerciseList():null}
         <Card
          style={{
           backgroundColor: "white",
@@ -206,7 +208,7 @@ export default class RightSide extends Component {
        <h1>Waiting Projects List</h1>
        <br />
        <Accordion>
-        <Card>{this.wait()}</Card>
+        <Card>{this.state.loading?this.wait():null}</Card>
        </Accordion>
       </div>
      </div>
