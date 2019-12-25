@@ -12,7 +12,7 @@
     "server": "nodemon server.js",
     "trybackend": "npm start --prefix trybackend",
     "dev": "concurrently \"npm run server\" \"npm run trybackend\"",
-    "heroku-postbuild": "cd /Devlancerfront && npm install && npm run build"
+    "heroku-postbuild": "cd Devlancerfront && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
